@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CharacterCard from "./CharacterCard";
+import SearchForm from "./SearchForm";
 import styled from 'styled-components'
 
 const CharacterInfo = styled.div`
@@ -18,7 +19,7 @@ export default function CharacterList() {
     axios
     .get('https://rickandmortyapi.com/api/character/')
     .then(response => {
-      console.log(response.data.results);
+      //console.log(response.data.results);
       const character = response.data.results;
       setCharacter(character);
     })
@@ -33,7 +34,7 @@ export default function CharacterList() {
     <section className="character-list">
       <CharacterInfo>
         {character.map(item => {
-          console.log(item.name);
+          //console.log(item.name);
           return <CharacterCard 
           key = {character.id}
           name ={item.name}
@@ -43,6 +44,7 @@ export default function CharacterList() {
           img={item.image}/>
         })}
       </CharacterInfo>
+     
     </section>
   );
 }

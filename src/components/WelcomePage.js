@@ -1,5 +1,5 @@
 import React from "react";
-import CharacterList from "./CharacterList";
+
 import styled from 'styled-components'
 
 const HeaderTitle = styled.h1`
@@ -19,7 +19,7 @@ export default function WelcomePage() {
     <section className="welcome-page">
       <header>
         <HeaderTitle>Welcome to the ultimate fan site!</HeaderTitle>
-      
+       
       <ImgContainer>
         <img
           className="main-img"
